@@ -107,6 +107,18 @@
         <trackHistory>true</trackHistory>
     </fields>
     <fields>
+        <fullName>Monthly_Payment__c</fullName>
+        <description>The amount to be paid by the tenant each month.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The amount to be paid by the tenant each month.</inlineHelpText>
+        <label>Monthly Payment</label>
+        <precision>7</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
         <fullName>Name</fullName>
         <trackHistory>true</trackHistory>
     </fields>
@@ -140,15 +152,20 @@
         <fullName>Status</fullName>
         <picklist>
             <picklistValues>
-                <fullName>In Approval Process</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Activated</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
                 <fullName>Draft</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>In Negotiation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Active</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Expired</fullName>
+                <color>#FF6666</color>
                 <default>false</default>
             </picklistValues>
             <restrictedPicklist>true</restrictedPicklist>
@@ -156,6 +173,20 @@
         </picklist>
         <trackHistory>true</trackHistory>
         <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Total_Payment_Over_Term__c</fullName>
+        <description>The total payment to be made by the tenant over the course of the contract term.</description>
+        <externalId>false</externalId>
+        <formula>ContractTerm * Monthly_Payment__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Contract term * Monthly Payment</inlineHelpText>
+        <label>Total Payment Over Term</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
     </fields>
     <listViews>
         <fullName>AllActivatedContracts</fullName>
