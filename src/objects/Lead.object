@@ -174,10 +174,6 @@
                 <default>false</default>
             </picklistValues>
             <picklistValues>
-                <fullName>Crop Protection</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
                 <fullName>Education</fullName>
                 <default>false</default>
             </picklistValues>
