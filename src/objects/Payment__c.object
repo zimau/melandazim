@@ -96,6 +96,16 @@
         <type>Date</type>
     </fields>
     <fields>
+        <fullName>Late_Payment_Reason__c</fullName>
+        <description>Reason for late payment.</description>
+        <externalId>false</externalId>
+        <label>Late Payment Reason</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
         <fullName>Monthly_Payment__c</fullName>
         <description>The amount to be paid by the tenant each month. Taken from the related contract.</description>
         <externalId>false</externalId>
